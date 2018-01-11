@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/user';
 
     /**
      * Create a new controller instance.
@@ -51,7 +51,16 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'password.confirmed' => 'required|string|min:6',
         ]);
+    }
+
+    protected function messages()
+    {
+        return [
+            'password.min:6'    =>  "密码必须至少为6个字符",
+            'password.confirmed'    => "密码不匹配",
+        ];
     }
 
     /**
@@ -68,4 +77,10 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    protected function edit(Request $request)
+    {
+        $data = $request->all();
+    }
+
 }

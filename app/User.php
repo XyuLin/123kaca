@@ -26,4 +26,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected $user;
+
+    public function getNameAttribute($value)
+    {
+        return ucfirst($value);
+    }
 }
