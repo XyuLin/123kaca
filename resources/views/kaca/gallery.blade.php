@@ -11,7 +11,7 @@
     <title>123kaca - 素材图库</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('Kaca/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('kaca/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <link href="{{ asset('kaca/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -20,7 +20,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="{{ asset('Kaca/css/1-col-portfolio.css')}}" rel="stylesheet">
+    <link href="{{ asset('kaca/css/1-col-portfolio.css')}}" rel="stylesheet">
 
   <!-- Custom styles for this template -->
     <link href="{{ asset('kaca/css/agency.min.css') }}" rel="stylesheet">
@@ -100,8 +100,8 @@
       @foreach($lists as $key => $value)
       <div class="row">
         <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="{{ $value->image }}" alt="">
+          <a href="{{ url('gallery/'.$value->id) }}">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="/{{ $value->image }}" alt="">
           </a>
         </div>
         <div class="col-md-5">
@@ -124,10 +124,10 @@
     <footer style="background-color:#343a40;">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <span class="copyright" style="color:#fff;">Copyright &copy; Your Website 2017</span>
+          <div class="col-md-5">
+            <span class="copyright" style="color:#fff;">Copyright © 2018 杭州摄手科技有限公司, All Rights Reserved</span>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-2">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="https://shop350644474.taobao.com" target="view_window">
@@ -136,13 +136,10 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-5">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
-                Privacy Policy
-              </li>
-              <li class="list-inline-item">
-                Terms of Use
+                备案号：浙ICP备16031327号
               </li>
             </ul>
           </div>
@@ -151,8 +148,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('Kaca/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{asset('Kaca/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('kaca/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{asset('kaca/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
   </body>
 

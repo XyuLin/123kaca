@@ -29,8 +29,8 @@ class WorkController extends Controller
         $filename = md5(uniqid(rand())). '.jpg';
         // 存储原图
         $img->save('album/'.$filename);
-        // 裁剪合适大小-缩略图resizeCanvas
-        $img->fit(450,350);
+        // 裁剪合适大小-缩略图resizeCanva
+        $img->fit(500,350);
         // 存储缩略图
         $img->save('thumb/album/'.$filename);
         return 'album/'.$filename;
@@ -138,6 +138,15 @@ class WorkController extends Controller
         Album::where('id',$id)->delete();
 
         return redirect('editW/'.$work);
+    }
+
+    public function destroyWork(Work $work)
+    {
+        $work->delete();
+        // 删除作品相关图片
+        $album = new Album;
+        $album->where('work_id',$work->id)->delete();
+        return redirect()->back();
     }
 
 }

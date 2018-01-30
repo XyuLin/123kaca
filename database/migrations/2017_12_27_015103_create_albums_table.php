@@ -16,7 +16,6 @@ class CreateAlbumsTable extends Migration
         Schema::create('albums', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('work_id',false,false);
-            $table->integer('parent_id',false,false);
             $table->string('path',255);
             $table->integer('rank',false,false);
             $table->timestamps();

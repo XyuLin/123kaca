@@ -19,6 +19,7 @@ class CreateWorksTable extends Migration
             $table->string('customer',255)->comment('客户');
             $table->string('describe',255);
             $table->char('type',1);
+	    $table->integer('count',false,false);
             $table->timestamps();
         });
     }

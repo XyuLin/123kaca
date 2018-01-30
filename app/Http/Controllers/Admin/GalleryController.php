@@ -58,7 +58,7 @@ class GalleryController extends Controller
             $value['type'] = $gallery->typeList[$value['type']];
         }
         
-        return view('Admin.galleryList',
+        return view('admin.galleryList',
             ['lists' => $list]);
     }
     
@@ -115,5 +115,10 @@ class GalleryController extends Controller
              return redirect('editG/'.$id);
           }
 
+    }
+    public function destroyGallery(Gallery $Gallery)
+    {
+        $Gallery->delete();
+        return redirect()->back();
     }
 }   

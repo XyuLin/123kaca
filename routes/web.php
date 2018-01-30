@@ -23,7 +23,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('type', 'Kaca\IndexController@type')->name('type');
 Route::get('works/{type?}', 'Kaca\IndexController@works');
 // 图片素材
-Route::get('gallerys', 'Kaca\IndexController@gallery')->name('gallery');
+Route::get('gallerys/{type?}', 'Kaca\IndexController@gallery')->name('gallery');
 // 下载信息
 Route::get('gallery/{gallery}','Kaca\IndexController@gallerInfo');
 // 作品
@@ -55,6 +55,8 @@ Route::middleware(['web','auth'])->group(function() {
 	Route::get('editG/{id}','Admin\GalleryController@editShow');
 	Route::post('editGallery/{id}', 'Admin\GalleryController@editGallery');
 	Route::get('delimage/{id}','Admin\GalleryController@delImage');
+	// 删除作品
+	Route::get('destroy/{work}', 'Admin\WorkController@destroyWork')->name('destroyWork');
 
 	// 作品提交
 	Route::get('work','Admin\WorkController@workList')->name('work');
@@ -63,5 +65,7 @@ Route::middleware(['web','auth'])->group(function() {
 	// 图库填充
 	Route::get('galleryList','Admin\GalleryController@galleryList')->name('galleryList');
 	Route::post('sendInfo','Admin\GalleryController@sendInfo')->name('sendInfo');
+	// 删除图库
+	Route::get('destroyG/{gallery}', 'Admin\GalleryController@destroyGallery')->name('destroyGallery');
 
 });

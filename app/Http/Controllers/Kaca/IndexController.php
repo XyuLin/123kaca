@@ -81,16 +81,20 @@ class IndexController extends Controller
             $judge = $follow->judge($user,$work->id);
             $work['judge'] = $judge;
         }
-        return view('Kaca.work',[
+        return view('kaca.work',[
             'work' => $work,
             'album'=> $album,
         ]);
     }
 
     // 图片素材
-    public function gallery()
+    public function gallery($type = '')
     {
-        $list = Gallery::orderBy('created_at','desc')->paginate(3);
+	if($type != ''){
+            $list = Gallery::where('type',$type)->orderBy('created_at','desc')->paginate(3);
+        }else{
+            $list = Gallery::where('type','0')->orderBy('created_at','desc')->paginate(3);
+        }       
 
         return view('kaca.gallery',
             ['lists' => $list]

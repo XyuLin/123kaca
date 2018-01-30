@@ -8,7 +8,7 @@ use App\Follow;
 class Work extends Model
 {
     public $typeList = [
-        '古典','清新','狂野','中式','西式',
+        '饮品小吃','西餐甜点','中餐糕点'
     ];
     /**
      * The attributes that are mass assignable.

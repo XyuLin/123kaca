@@ -1,6 +1,6 @@
 @extends('layouts.admin');
 
-@section('title','图库填充')
+@section('title','美食图库填充')
 @section('upload')
 <li class="opened active">
 	<a href="#" >

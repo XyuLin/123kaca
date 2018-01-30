@@ -47,7 +47,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="/">123 kaca </a>
+        <a class="navbar-brand js-scroll-trigger" href="/">咔嚓鱼美食摄影 </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -89,9 +89,9 @@
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-lead-in">咔嚓鱼美食摄影工作室</div>
-          <div class="intro-lead-in text-uppercase">· 1 2 3 咔 嚓 ·</div>
-          <a class="btn btn-info btn-xl text-uppercase js-scroll-trigger" style="border-radius:50px" href="#news-works">你好</a>
+          <div class="intro-lead-in" style="font-size:40px;" >给美食一个新高度</div>
+          <div class="intro-lead-in text-uppercase">YES WE CAN</div>
+          <a class="btn btn-info btn-xl text-uppercase js-scroll-trigger" style="border-radius:50px" href="#contact">联系我们</a>
         </div>
       </div>
     </header>
@@ -131,7 +131,7 @@
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- Ser{{ route('gallery') }}vices -->
     <section class="bg-light" id="services">
       <div class="container">
         <div class="row">
@@ -148,28 +148,28 @@
                 <i class="fa fa-file-image-o fa-stack-1x fa-inverse"></i>
               </span>
             </a>
-            <h4 class="service-heading">图片素材</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto.</p>
+            <h4 class="service-heading">美食图片</h4>
+            <p class="text-muted"></p>
           </div>
           <div class="col-md-3">
-            <a href="#">
+            <a href="{{ route('gallery',1) }}">
               <span class="fa-stack fa-4x">
                 <i class="fa fa-circle fa-stack-2x text-primary"></i>
                 <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
               </span>
             </a>
-            <h4 class="service-heading">海报模版</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto.</p>
+            <h4 class="service-heading">美食海报</h4>
+            <p class="text-muted"></p>
           </div>
           <div class="col-md-3">
-            <a href="#">
+            <a href="{{ route('gallery',2) }}">
               <span class="fa-stack fa-4x">
                 <i class="fa fa-circle fa-stack-2x text-primary"></i>
                 <i class="fa fa-book fa-stack-1x fa-inverse"></i>
               </span>
             </a>
             <h4 class="service-heading">菜单模版</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto.</p>
+            <p class="text-muted"></p>
           </div>
            <div class="col-md-3">
             <a href="{{ route('type') }}">
@@ -179,7 +179,7 @@
               </span>
             </a>
             <h4 class="service-heading">特效字体模版</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto.</p>
+            <p class="text-muted"></p>
           </div>
         </div>
       </div>
@@ -234,11 +234,11 @@
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="email" type="email" value="邮箱：lilinphp@163.com "  disabled >
+                    <input class="form-control" id="email" type="email" value="邮箱：goha@foxmail.com "  disabled >
                     <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <input class="form-control" id="phone" type="tel" value="手机号：13734715267"  disabled >
+                    <input class="form-control" id="phone" type="tel" value="手机号：17764553811"  disabled >
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
@@ -258,10 +258,10 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Your Website 2017</span>
+          <div class="col-md-5">
+            <span class="copyright">Copyright © 2018 杭州摄手科技有限公司, All Rights Reserved</span>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-2">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="https://shop350644474.taobao.com" target="view_window">
@@ -280,13 +280,10 @@
               </li> --}}
             </ul>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-5">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
-               Privacy Policy
-              </li>
-              <li class="list-inline-item">
-                Terms of Use
+               备案号：浙ICP备16031327号
               </li>
             </ul>
           </div>

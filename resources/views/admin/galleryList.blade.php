@@ -27,8 +27,8 @@
 <!-- 数据表 -->
 <div class="page-title">
 	<div class="title-env">
-		<h1 class="title">作品信息表</h1>
-		<p class="description">Work information table</p>
+		<h1 class="title">美食图库列表</h1>
+		<p class="description">GalleryList</p>
 	</div>
 
 	<div class="breadcrumb-env">
@@ -89,6 +89,7 @@
 					<th>素材名称</th>
 					<th>素材描述</th>
 					<th>上传时间</th>
+					<th>删除</th>
 				</tr>
 			</thead>
 
@@ -101,19 +102,21 @@
 					<th>素材名称</th>
 					<th>素材描述</th>
 					<th>上传时间</th>
+					<th>删除</th>
 				</tr>
 			</tfoot>
 
 			<tbody>
 				@foreach($lists as $list)	
 					<tr>
-						<td><a href="{{ url('editG/'.$list->id) }}"> {{ $list->id }} </td></a>
+						<td class="text-center"><a href="{{ url('editG/'.$list->id) }}"> {{ $list->id }} </td></a>
 						<td> {{ $list->user_id }} </td>
 						<td> {{ $list->type }} </td>
 						<td> <img src="thumb/{{ $list->image }}"/> </td>
 						<td> {{ $list->title }} </td>
 						<td> {{ $list->desc }} </td>
 						<td> {{ $list->created_at }} </td>
+						<td class="text-center"><a style="color: #c13e6d;" href="{{ route('destroyGallery',$list) }}"> 删除 </td></a>
 					</tr>				
 				@endforeach
 			</tbody>

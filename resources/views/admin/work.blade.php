@@ -89,6 +89,7 @@
 					<th>作品风格</th>
 					<th>点赞人数</th>
 					<th>拍摄时间</th>
+					<th>删除</th>
 				</tr>
 			</thead>
 
@@ -101,19 +102,21 @@
 					<th>作品风格</th>
 					<th>点赞人数</th>
 					<th>拍摄时间</th>
+					<th>删除</th>
 				</tr>
 			</tfoot>
 
 			<tbody>
 				@foreach($lists as $list)	
 					<tr>
-						<td><a href="{{ url('editW/'.$list->id) }}" >{{ $list->id }} </a></td>
+						<td class="text-center"><a href="{{ url('editW/'.$list->id) }}" >{{ $list->id }} </a></td>
 						<td> {{ $list->user_id }} </td>
 						<td> {{ $list->customer }} </td>
 						<td> {{ $list->describe }} </td>
 						<td> {{ $list->type }} </td>
 						<td> {{ $list->count }} </td>
 						<td> {{ $list->created_at }} </td>
+						<td class="text-center"><a style="color: #c13e6d;" href="{{ route('destroyWork', $list) }}" > 删除  </a></td>
 					</tr>				
 				@endforeach
 			</tbody>

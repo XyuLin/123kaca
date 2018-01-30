@@ -43,20 +43,20 @@
 				<div class="col-md-4">
 					<div class="user-info">
 						<div class="user-image">
-							<a href="extra-profile.html">
-								<img src="{{ asset('kaca/admin/images/user-2.png')}}" class="img-responsive img-circle" />
+							<a href="#">
+								<img src="{{ asset('kaca/admin/images/user.png')}}" class="img-responsive img-circle" />
 							</a>
 						</div>
 						<div class="user-details">
 							<h3>
-								<a href="extra-profile.html"> {{ Auth::user()->name }} </a>
+								<a href="#"> {{ Auth::user()->name }} </a>
 								<!-- 登录状态 -->
 								<span class="user-status is-online"></span>
 							</h3>
 							<p class="user-title">Web Developer</p>
 							<div class="user-links">
 								<a href="{{ route('logout')}}" class="btn btn-warning">退出</a>{{-- 
-								<a href="extra-profile.html" class="btn btn-primary">Upgrade</a> --}}
+								<a href="#" class="btn btn-primary">Upgrade</a> --}}
 							</div>
 						</div>
 					</div>
@@ -77,7 +77,7 @@
 							<img src="{{ asset('kaca/img/logo2.png')}}" width="162" alt="" />
 						</a>
 						
-						<a href="dashboard-1.html" class="logo-collapsed">
+						<a href="{{ asset('/') }}" class="logo-collapsed">
 							<img src="{{ asset('kaca/img/logo2.png')}}" width="80" alt="" />
 						</a>
 					</div>
@@ -218,7 +218,7 @@
 								</ul>
 							</li>
 							<li class="external">
-								<a href="blank-sidebar.html">
+								<a href="#">
 									<span>All Messages</span>
 									<i class="fa-link-ext"></i>
 								</a>
@@ -282,7 +282,7 @@
 					</li> --}}
 					<li class="dropdown user-profile">
 						<a href="#" data-toggle="dropdown">
-							<img src="{{ asset('kaca/admin/images/user-4.png')}}" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
+							<img src="{{ asset('kaca/admin/images/user.png')}}" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
 							<span>
 								{{ Auth::user()->name }}
 								<i class="fa-angle-down"></i>
@@ -340,9 +340,7 @@
 				
 					<!-- Add your copyright text here -->
 					<div class="footer-text">
-						&copy; 2014 
-						<strong>Xenon</strong> 
-						More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+						Copyright © 2018 杭州摄手科技有限公司, All Rights Reserved
 					</div>
 					
 					

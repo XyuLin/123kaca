@@ -20,6 +20,8 @@ class CreateGalleryTable extends Migration
             $table->string('image',255);
             $table->string('title',255);
             $table->string('desc',255);
+	    $table->string('url',255);
+	    $table->string('cipher',50);
             $table->timestamps();
         });
     }
